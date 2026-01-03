@@ -1,0 +1,26 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/fc3c6_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_71b59b5b._.js",
+    "static/chunks/fc3c6_next_dist_compiled_react-dom_6c2bfc0f._.js",
+    "static/chunks/fc3c6_next_dist_compiled_react-server-dom-turbopack_dc843c99._.js",
+    "static/chunks/fc3c6_next_dist_compiled_next-devtools_index_80bf91da.js",
+    "static/chunks/fc3c6_next_dist_compiled_c26c24be._.js",
+    "static/chunks/fc3c6_next_dist_client_1fbbbe8c._.js",
+    "static/chunks/fc3c6_next_dist_65508e12._.js",
+    "static/chunks/fc3c6_@swc_helpers_cjs_183a6f8c._.js",
+    "static/chunks/985e3_Guincho-express-claro-escuro_v0-auto-socorro-express-claro-e-escuro_a0ff3932._.js",
+    "static/chunks/a4b64_Guincho-express-claro-escuro_v0-auto-socorro-express-claro-e-escuro_8bf83949._.js"
+  ]
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js"
+];

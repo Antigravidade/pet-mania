@@ -43,7 +43,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 px-4 bg-secondary relative overflow-hidden">
+      <section id="home" className="pt-32 pb-20 px-4 bg-dark relative overflow-hidden">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-cta/10 rounded-full blur-3xl"></div>
 
@@ -52,27 +52,28 @@ function App() {
             <span className="inline-block px-4 py-1 bg-white text-primary rounded-full text-sm font-bold shadow-sm mb-2">
               🐾 O melhor cuidado para seu pet
             </span>
-            <h1 className="text-5xl md:text-6xl font-black text-dark leading-tight">
-              Seu melhor amigo merece <span className="text-primary block">tratamento VIP!</span>
+            <h1 className="text-5xl md:text-6xl font-black text-primary leading-tight">
+              Seu melhor amigo merece <span className="text-white block">tratamento VIP!</span>
             </h1>
-            <p className="text-xl text-gray-700 max-w-lg mx-auto md:mx-0">
+            <p className="text-xl text-white max-w-lg mx-auto md:mx-0">
               Banho, tosa e cuidados veterinários com muito amor e carinho. Venha conhecer o Pet Mania!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
               <WhatsAppButton text="Agendar Horário" size="large" />
-              <a href="#services" className="px-8 py-4 bg-white text-dark font-bold rounded-full hover:bg-gray-50 transition-colors shadow-md flex items-center justify-center gap-2">
-                Nossos Serviços
+              <a href="tel:+5544999324635" className="px-8 py-4 bg-white text-dark font-bold rounded-full hover:bg-gray-50 transition-colors shadow-md flex items-center justify-center gap-2">
+                <Phone className="w-5 h-5" />
+                (44) 99932-4635
               </a>
             </div>
           </div>
-          <div className="flex-1 relative">
-            <div className="bg-white p-4 rounded-full shadow-2xl relative z-10 blob-shape overflow-hidden bg-[url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center h-[500px] w-full">
+          <div className="flex-1 relative w-full">
+            <div className="bg-white p-2 md:p-4 rounded-3xl md:rounded-full shadow-2xl relative z-10 overflow-hidden bg-[url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center aspect-square md:h-[500px] md:aspect-auto w-full max-w-md mx-auto md:max-w-none">
             </div>
-            {/* Decorative items */}
-            <div className="absolute top-10 -right-4 bg-white p-3 rounded-2xl shadow-lg animate-bounce duration-1000">
+            {/* Decorative items - hidden on mobile */}
+            <div className="hidden md:block absolute top-10 -right-4 bg-white p-3 rounded-2xl shadow-lg animate-bounce duration-1000">
               <Heart className="w-8 h-8 text-cta fill-current" />
             </div>
-            <div className="absolute bottom-10 -left-4 bg-white p-4 rounded-2xl shadow-lg">
+            <div className="hidden md:block absolute bottom-10 -left-4 bg-white p-4 rounded-2xl shadow-lg">
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   <div className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white"></div>
@@ -155,6 +156,126 @@ function App() {
             </ul>
             <div className="pt-6">
               <WhatsAppButton text="Fale Conosco" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-dark">O que nossos clientes dizem</h2>
+            <div className="h-2 w-20 bg-primary mx-auto rounded-full mb-6"></div>
+            <p className="text-gray-600">
+              Veja o que os tutores de pets felizes têm a dizer sobre nossos serviços!
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-secondary/30 p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+                  🐕
+                </div>
+                <div>
+                  <h4 className="font-bold text-dark">Maria Silva</h4>
+                  <div className="flex gap-1 text-primary">
+                    {'★★★★★'.split('').map((star, i) => <span key={i}>{star}</span>)}
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">
+                "Meu cachorro adora vir aqui! A equipe é super atenciosa e o ambiente é muito limpo. Recomendo demais!"
+              </p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-secondary/30 p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+                  🐈
+                </div>
+                <div>
+                  <h4 className="font-bold text-dark">João Santos</h4>
+                  <div className="flex gap-1 text-primary">
+                    {'★★★★★'.split('').map((star, i) => <span key={i}>{star}</span>)}
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">
+                "Excelente atendimento! Minha gata sempre volta linda e cheirosa. Profissionais muito qualificados!"
+              </p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-secondary/30 p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl">
+                  🐾
+                </div>
+                <div>
+                  <h4 className="font-bold text-dark">Ana Costa</h4>
+                  <div className="flex gap-1 text-primary">
+                    {'★★★★★'.split('').map((star, i) => <span key={i}>{star}</span>)}
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-700 italic">
+                "Confio de olhos fechados! Deixei meu pet no hotelzinho e ele voltou super feliz. Muito cuidado e carinho!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map + CTA Section */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Map - First on mobile, second on desktop */}
+            <div className="order-1 md:order-2 w-full">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-[400px] md:h-[500px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.448!2d-46.633!3d-23.550!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzAwLjAiUyA0NsKwMzcnNTguOCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização Pet Mania"
+                ></iframe>
+              </div>
+            </div>
+
+            {/* CTA - Second on mobile, first on desktop */}
+            <div className="order-2 md:order-1 space-y-6">
+              <h2 className="text-4xl font-bold text-dark">Venha nos visitar!</h2>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Estamos localizados em um espaço aconchegante e de fácil acesso. Traga seu pet para conhecer nossa estrutura e equipe!
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-dark">Endereço</p>
+                    <p className="text-gray-600">Av. dos Animais, 123 - Centro</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Calendar className="w-6 h-6 text-primary shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-dark">Horário de Funcionamento</p>
+                    <p className="text-gray-600">Seg à Sex: 08h - 18h</p>
+                    <p className="text-gray-600">Sáb: 08h - 13h</p>
+                  </div>
+                </div>
+              </div>
+              <div className="pt-6">
+                <WhatsAppButton text="Agendar Visita" size="large" />
+              </div>
             </div>
           </div>
         </div>
